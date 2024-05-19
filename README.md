@@ -15,8 +15,9 @@ for now it is just a binary-string converter
 (DataDE is In and Out, DataEN is Encode)* - Possible change to DataIN, DataEN, DataOUT
 
 numbin.py has 2 functions for now
-numtobin() - Converts a Number to binary
-bintonum() - Converts a binary to Number
+
+1. numtobin() - Converts a Number to binary
+2. bintonum() - Converts a binary to Number
 
 binEnc.py - Gets the letter and converts it to binary, then saves it to dataEN 
 then it does that for the next letter
