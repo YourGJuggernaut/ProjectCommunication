@@ -28,13 +28,15 @@ The Alphabet System:
 1. Convert 5 bit binary to number
 2. Add 96
 3. Convert to ASCII
-   Example
-00001 = 1 + 97 = ASCII(98) = a
+Example:
+00001 = 1 + 97 = ASCII(98) = b
 
 What is left to do:
 detection of \n [ DONE ]
 
-Addition of symbols
-Addition of Uppercase
-Addition of Numbers
+detection of SPACE [ DONE ]
+
+Addition of symbols, 
+Addition of Uppercase, 
+Addition of Numbers, 
 May 19, 2024 2:46AM - Project Comm V1
