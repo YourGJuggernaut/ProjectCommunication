@@ -36,7 +36,7 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 3. Convert the result to an ASCII character.
 
 **Example:**
-- `00001` = 1 + 96 = ASCII(97) = 'a'
+- `00001` = 1 + 97 = ASCII(98) = 'b'
 """
 
 # Features
