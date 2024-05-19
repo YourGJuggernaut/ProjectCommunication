@@ -40,7 +40,7 @@ detection of SPACE [ DONE ]
 
 Addition of symbols;
 
-Addition of Uppercase;
+Addition of Uppercase [ DONE ];
 
 Addition of Numbers;
 
