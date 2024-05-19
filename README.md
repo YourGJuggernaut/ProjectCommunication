@@ -1,50 +1,55 @@
 # ProjectCommunication
-A Python Communication project 
 
-I am still a begineer in programing, so this is one of my bigger projects
+"""
+ProjectCommunication
+A Python Communication Project
 
-For yall idiots who dont understand coding let me explain
+I am still a beginner in programming, so this is one of my bigger projects.
 
+For those who might not be familiar with coding, let me explain:
 
-This is a simple project
-About communication;
+This is a simple project focused on communication. It's just the beginning, but here's what it does for now:
+"""
 
-this is just a beginging
+"""
+### About the Project
+This project is currently a binary-string converter:
+- **DataDE**: Input and output for decoded data
+- **DataEN**: Encoded data
+- *(Potentially changing to DataIN, DataEN, DataOUT)*
 
-for now it is just a binary-string converter
-(DataDE is In and Out, DataEN is Encode)* - Possible change to DataIN, DataEN, DataOUT
+### Key Components
+#### `numbin.py`
+This module contains two primary functions:
+1. **`numtobin()`**: Converts a number to binary.
+2. **`bintonum()`**: Converts binary to a number.
 
-numbin.py has 2 functions for now
+#### `binEnc.py`
+This script takes letters, converts them to binary, and saves them to `DataEN`. It processes each letter sequentially.
 
-1. numtobin() - Converts a Number to binary
-2. bintonum() - Converts a binary to Number
+#### `binDec.py`
+This script takes 6-bit binary chunks, converts them to letters, and saves them to `DataDE`. It processes each chunk sequentially.
 
-binEnc.py - Gets the letter and converts it to binary, then saves it to dataEN 
-then it does that for the next letter
+### The Alphabet System
+1. Convert a 5-bit binary to a number.
+2. Add 96 to the number.
+3. Convert the result to an ASCII character.
 
-binDec.py - Gets the 6-bit chunk and converts it to letter, then saves it to dataDE
-then it does taht for the next chunk
+**Example:**
+- `00001` = 1 + 96 = ASCII(97) = 'a'
+"""
 
-The Alphabet System:
-1. Convert 5 bit binary to number
-2. Add 96
-3. Convert to ASCII
-Example:
-00001 = 1 + 97 = ASCII(98) = b
+# Features
+"""
+- **Detection of newline characters (`\n`)**: **DONE**
+- **Detection of spaces**: **DONE**
+- **Addition of symbols**: *In Progress*
+- **Addition of uppercase letters**: **DONE**
+- **Addition of numbers**: *In Progress*
+"""
 
-What is left to do:
-
-detection of \n [ DONE ]
-
-detection of SPACE [ DONE ]
-
-Addition of symbols;
-
-Addition of Uppercase [ DONE ];
-
-Addition of Numbers;
-
-
-
-May 19, 2024 2:46AM - Project Communication
-May 20, 2024, 12:34PM - Project Communication
+# Updates
+"""
+- **May 19, 2024, 2:46 AM** - Initial version of ProjectCommunication.
+- **May 20, 2024, 12:34 PM** - Latest update.
+"""
