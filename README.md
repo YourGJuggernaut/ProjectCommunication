@@ -45,7 +45,7 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 
 
 
-### LICENSE USE
+# LICENSE USE:
 What You Can Do:
 - Use the software for any purpose
 - Modify the software
