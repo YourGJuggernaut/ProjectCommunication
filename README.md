@@ -46,15 +46,15 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 
 
 # LICENSE USE:
-What You Can Do:
+1. What You Can Do:
 - Use the software for any purpose
 - Modify the software
 - Distribute copies of the software to others.
 - use the software into your own projects
-What you Can't Do:
+2. What you Can't Do:
 - Remove the license notice
 - Impose additional restrictions on recipients' rights granted by the GPL.
-What you Must Note:
+3. What you Must Note:
 - Any modifications or derivatives of the software must be licensed under the GPL.
 - Provide access to the corresponding source code if distributing the software or any modifications.
 - Include a copy of the GPL license with any distribution of the software.
