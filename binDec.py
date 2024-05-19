@@ -1,4 +1,5 @@
-from numbin import bintonum
+from numbin import bintonum # type: ignore
+bol = False
 
 with open('DataDE.txt', 'w') as file:
     pass
@@ -15,12 +16,20 @@ for chunk in binary_chunks:
     # - mine
     if chunk == "SPACE":
         decoded_string += " "
+        continue
     elif chunk == "ENTER":
-        decoded_string += "\n" 
+        decoded_string += "\n"
+        continue
+    elif chunk == "SHIFT":
+        bol = True
+        continue
     else:
         decimal_value = bintonum(chunk)
-
-        decoded_string += chr(decimal_value + 97)
+        if bol:
+            decoded_string += chr(decimal_value + 65)
+            bol = False
+        else:
+            decoded_string += chr(decimal_value + 97)
     # - mine
 # Write the decoded string to DataDE.txt
 with open('DataDE.txt', 'a', encoding='utf-8') as file:
