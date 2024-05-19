@@ -1,5 +1,5 @@
 import os
-from numbin import bintonum, numtobin
+from numbin import numtobin # type: ignore
 
 with open('DataEN.txt', 'w') as file:
     pass
@@ -9,6 +9,8 @@ with open('dataDE.txt', 'r') as file:
 
 with open ('DataEN.txt', 'a') as file:
     for letter in content:
+        if letter == letter.upper() and letter != " ":
+            file.write("SHIFT" + "\n")
         if letter.isalpha():
             value = ord(letter.lower()) - 97
             c = numtobin(value)
