@@ -9,8 +9,6 @@ For those who might not be familiar with coding, let me explain:
 
 This is a simple project focused on communication. It's just the beginning, but here's what it does for now:
 
-
-
 ### About the Project
 This project is currently a binary-string converter:
 - **DataDE**: Input and output for decoded data
@@ -44,6 +42,25 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 - **Addition of symbols**: *In Progress*
 - **Addition of uppercase letters**: **DONE**
 - **Addition of numbers**: *In Progress*
+
+
+
+### LICENSE USE
+What You Can Do:
+- Use the software for any purpose
+- Modify the software
+- Distribute copies of the software to others.
+- use the software into your own projects
+What you Can't Do:
+- Remove the license notice
+- Impose additional restrictions on recipients' rights granted by the GPL.
+What you Must Note:
+- Any modifications or derivatives of the software must be licensed under the GPL.
+- Provide access to the corresponding source code if distributing the software or any modifications.
+- Include a copy of the GPL license with any distribution of the software.
+- The software has no warranty.
+
+
 
 
 # Updates
