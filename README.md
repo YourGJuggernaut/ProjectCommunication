@@ -36,5 +36,5 @@ detection of \n [ DONE ]
 
 Addition of symbols
 Addition of Uppercase
-
+Addition of Numbers
 May 19, 2024 2:46AM - Project Comm V1
