@@ -3,9 +3,14 @@ def getkey(key):
     with open('dataEN.pycomm', 'r') as file:
         securitycontent = file.read()
     for i in range (0, len(key)):
-        string = string + securitycontent[i]
+        try:
+            string = string + securitycontent[i]
+        except Exception as e:
+            return False
     if string == key:
         return True
+    else:
+        return False
 # used ChatGPT as Idea
 def wipekey(enc):
     string = ""
