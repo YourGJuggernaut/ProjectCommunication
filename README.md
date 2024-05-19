@@ -67,4 +67,4 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 
 - **May 19, 2024, 2:46 AM** - Initial version of ProjectCommunication.
 - **May 20, 2024, 12:34 PM** - Fixed Some things + Uppercase.
-
+- **May 20, 2024, 8:26 PM** - Added More Security Mesures part 1 (file extension)
