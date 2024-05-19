@@ -1,13 +1,13 @@
 import os
 from numbin import numtobin # type: ignore
 
-with open('DataEN.txt', 'w') as file:
+with open('DataEN.pycomm', 'w') as file:
     pass
 
-with open('dataDE.txt', 'r') as file:
+with open('dataDE.pycomm', 'r') as file:
     content = file.read()  
 
-with open ('DataEN.txt', 'a') as file:
+with open ('DataEN.pycomm', 'a') as file:
     for letter in content:
         if letter == letter.upper() and letter != " ":
             file.write("SHIFT" + "\n")
