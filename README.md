@@ -34,6 +34,7 @@ Example:
 What is left to do:
 
 detection of \n [ DONE ]
+
 detection of SPACE [ DONE ]
 
 Addition of symbols;
@@ -41,7 +42,6 @@ Addition of symbols;
 Addition of Uppercase;
 
 Addition of Numbers;
-
 
 
 
