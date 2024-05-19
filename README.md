@@ -32,11 +32,17 @@ Example:
 00001 = 1 + 97 = ASCII(98) = b
 
 What is left to do:
-detection of \n [ DONE ]
 
+detection of \n [ DONE ]
 detection of SPACE [ DONE ]
 
-Addition of symbols, 
-Addition of Uppercase, 
-Addition of Numbers, 
+Addition of symbols;
+
+Addition of Uppercase;
+
+Addition of Numbers;
+
+
+
+
 May 19, 2024 2:46AM - Project Comm V1
