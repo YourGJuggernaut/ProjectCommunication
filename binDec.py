@@ -1,8 +1,12 @@
 from numbin import bintonum, getkey, wipekey  # type: ignore
 import os
-
+with open('key.key', 'r') as file:
+    key = file.read()
 passed = False
-inputkey = input('What is the key: ')
+if key == "":
+    print("no password")
+else:
+    inputkey = input('What is the key: ')
 
 for _ in range(2):
     bol = False
