@@ -1,3 +1,26 @@
+def getkey(key):
+    string = ""
+    with open('dataEN.pycomm', 'r') as file:
+        securitycontent = file.read()
+    for i in range (0, len(key)):
+        string = string + securitycontent[i]
+    if string == key:
+        return True
+# used ChatGPT as Idea
+def wipekey(enc):
+    string = ""
+    with open('dataEN.pycomm', 'r') as file:
+        securitycontent = file.read()
+    for i in range(0, len(enc)):
+        string = string + securitycontent[i]
+    modded = securitycontent.replace(string, '')
+    
+    with open('dataEN.pycomm', 'w') as file:
+        file.write(modded)
+    with open('key.key', 'w') as file:
+        pass
+
+
 def bintonum(bininput):
     bininput = str(bininput) 
     templen = len(bininput)
