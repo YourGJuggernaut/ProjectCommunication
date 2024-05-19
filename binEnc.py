@@ -1,13 +1,19 @@
-import os
 from numbin import numtobin # type: ignore
-
+key_string = input('insert KEY: ')
 with open('DataEN.pycomm', 'w') as file:
     pass
 
-with open('dataDE.pycomm', 'r') as file:
+with open('dataIN.pycomm', 'r') as file:
     content = file.read()  
+with open('key.key', 'w') as file:
+    pass
+
+
+with open ('key.key', 'a') as file:
+    file.write(key_string)
 
 with open ('DataEN.pycomm', 'a') as file:
+    file.write(key_string)
     for letter in content:
         if letter == letter.upper() and letter != " ":
             file.write("SHIFT" + "\n")
