@@ -6,12 +6,12 @@ with open('DataDE.txt', 'w') as file:
 with open('DataEN.txt', 'r') as file:
     content = file.read()
 # CHAT GPT START ---
-# Split the binary string into groups of 6 bits
+# Split the binary string into groups of 5 bits
 binary_chunks = [content[i:i+5] for i in range(0, len(content), 6)]
 
 decoded_string = ""
 for chunk in binary_chunks:
-    # Convert each 6-bit binary chunk back to decimal
+    # Convert each 5-bit binary chunk back to decimal
     # - mine
     if chunk == "SPACE":
         decoded_string += " "
