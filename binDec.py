@@ -55,4 +55,6 @@ for _ in range(2):
 if not passed:
     print('key not correct')
 if passed:
+    with open('DataEN.pycomm', 'w') as file:
+        pass
     os.remove("key.key")
