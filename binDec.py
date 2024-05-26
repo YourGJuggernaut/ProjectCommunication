@@ -1,5 +1,5 @@
 from numbin import bintonum, getkey, wipekey  # type: ignore
-from rulecrypter import checktag, addtag, decry, secret, removekey # type: ignore
+from rulecrypter import checktag, addtag, decry, secret, removekey, decryptthem # type: ignore
 import os
 key = decry()
 passed = False
@@ -60,6 +60,7 @@ if not passed:
 #    passed = False
 #    print("Arleady used, re-allow decryption")
 if passed:
-#   removekey()
+    if decryptthem():
+        removekey()
 #   addtag()
     print("Fully Succesfull")

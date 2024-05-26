@@ -48,9 +48,27 @@ def secret():
 def checktag():
     return True
 
+def encryptthem(Bool):
+    from cryptography.fernet import Fernet # type: ignore
+    with open('dual.key', 'r') as file:
+        key = file.read()
+    cipher = Fernet(key)
+    content = Bool.encode('utf-8')
+    text = cipher.encrypt(content)
+    return text
 
-
-
+def decryptthem():
+    from cryptography.fernet import Fernet # type: ignore
+    with open('dual.key', 'r') as file:
+        key = file.read()
+    with open('metadata.key') as file:
+        Bool = file.read()
+    cipher = Fernet(key)
+    content = cipher.decrypt(Bool).decode()
+    if content == "True":
+        return True
+    else:
+        return False
 
 
 

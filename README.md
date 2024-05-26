@@ -37,6 +37,13 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 - `00001` = 1 + 97 = ASCII(98) = 'b'
 
 
+# Output
+- **If you want to send somebody This encrypted mess you must send the following:**
+1. DataEN.pycomm (The Actuall File)
+2. dual.key (The cryptography key)
+3. key.key (The Password)
+4. metadata.key (Attributes)
+- **This will the basic principle of how my Communication will work**
 # Features
 - **Detection of newline characters (`\n`)**: **DONE**
 - **Detection of spaces**: **DONE**
@@ -44,7 +51,7 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 - **Addition of uppercase letters**: **DONE**
 - **Addition of numbers**: *In Progress*
 - **Encryption of keys**: **DONE**
-- **One-time Key + All-time Key**: *1/2*
+- **One-time Key + All-time Key**: **DONE**
 
 # **NEW** Security
 - When Encoding, You enter a key. A file named key.key gets saved with that key. When it gets encrypted it also puts the key in the dataEN.pycomm

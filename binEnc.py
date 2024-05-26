@@ -1,6 +1,16 @@
 from numbin import numtobin # type: ignore
-from rulecrypter import removetag, encrypt # type: ignore
+from rulecrypter import removetag, encrypt, encryptthem # type: ignore
 key_string = input('insert KEY: ')
+
+getstate = input('\n Is this One time - True or All Time - False (True/False): ')
+if getstate == "True" or getstate == "true":
+    boolean = True
+elif getstate == "False" or getstate == "false":
+    boolean = False
+else:
+    print("True or False only!")
+    exit()
+
 with open('DataEN.pycomm', 'w') as file:
     pass
 
@@ -26,3 +36,13 @@ with open ('DataEN.pycomm', 'a') as file:
             file.write("SPACE" + "\n")
         if letter == "\n":
             file.write("ENTER" + "\n")
+with open('metadata.key', 'w') as file:
+    pass
+if boolean:
+    f = encryptthem('True')
+    with open('metadata.key', 'wb') as file:
+        file.write(f)
+else:
+    f = encryptthem('False')
+    with open('metadata.key', 'wb') as file:
+        file.write(f)
