@@ -43,12 +43,14 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 - **Addition of symbols**: *In Progress*
 - **Addition of uppercase letters**: **DONE**
 - **Addition of numbers**: *In Progress*
-- **Encryption of keys**: *In Progress*
+- **Encryption of keys**: **DONE**
 - **One-time Key + All-time Key**: *1/2*
 
 # **NEW** Security
 - When Encoding, You enter a key. A file named key.key gets saved with that key. When it gets encrypted it also puts the key in the dataEN.pycomm
 - When Decoding, You enter a key. Checks for if key.key == dataEN.pycomm (key) == user input. If all correct it runs it 2 times (To be trouble shooted) and Deletes the key.key
+- Key is now Encrypted using Fernet
+- 2 Keys now
 # LICENSE USE:
 1. What You Can Do:
 - Use the software for any purpose

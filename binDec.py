@@ -1,12 +1,19 @@
 from numbin import bintonum, getkey, wipekey  # type: ignore
+from rulecrypter import checktag, addtag, decry, secret, removekey # type: ignore
 import os
-with open('key.key', 'r') as file:
-    key = file.read()
+key = decry()
 passed = False
+passi = False
 if key == "":
     print("no password")
+    inputkey = ""
 else:
     inputkey = input('What is the key: ')
+
+state = getkey(key)
+if getkey(key) and key == inputkey:
+    wipekey(key)
+    passed = True
 
 for _ in range(2):
     bol = False
@@ -16,14 +23,9 @@ for _ in range(2):
 
     with open('DataEN.pycomm', 'r') as file:
         content = file.read()
-    with open('key.key', 'r') as file:
-        key = file.read()
 
-    state = getkey(key)
-    if getkey(key) and key == inputkey:
-        wipekey(key)
-        passed = True
-    if getkey(key) and key == inputkey:
+
+    if passed:
         # CHAT GPT START ---
         # Split the binary string into groups of 5 bits
         binary_chunks = [content[i:i+5] for i in range(0, len(content), 6)]
@@ -49,12 +51,15 @@ for _ in range(2):
                 decoded_string += chr(decimal_value + 97)
         with open('DataOUT.pycomm', 'a', encoding='utf-8') as file:
             file.write(decoded_string)
+
+    Passi = True
         # - mine
-
-
 if not passed:
     print('key not correct')
+#if checktag() == secret():
+#    passed = False
+#    print("Arleady used, re-allow decryption")
 if passed:
-    with open('DataEN.pycomm', 'w') as file:
-        pass
-    os.remove("key.key")
+#   removekey()
+#   addtag()
+    print("Fully Succesfull")
