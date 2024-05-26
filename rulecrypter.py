@@ -13,25 +13,6 @@ def encrypt():
     with open('dual.key', 'wb') as file:
         file.write(key)
 
-def addtag():
-    with open('encdata.pycomm', 'w') as file:
-        pass
-    with open('encdata.pycomm', 'a') as file:
-        file.write('used')
-
-def removetag(password):
-    if password == "killswitch":
-      #  with open('encdata.pycomm', 'w') as file:
-       #     pass
-       return True
-    elif password == "ENCBYPASS ":
-       # with open('encdata.pycomm', 'w') as file:
-        #    pass
-        return True
-    else:
-        print('Bad Key')
-
-
 def decry():
     from cryptography.fernet import Fernet # type: ignore
     with open('dual.key', 'r') as file:
@@ -41,12 +22,6 @@ def decry():
     fernet = Fernet(content)
     decrypt = fernet.decrypt(content2).decode()
     return decrypt
-
-def secret():
-    return 'done'
-
-def checktag():
-    return True
 
 def encryptthem(Bool):
     from cryptography.fernet import Fernet # type: ignore
@@ -70,10 +45,9 @@ def decryptthem():
     else:
         return False
 
-
-
-
 def removekey():
     import os
     os.remove("key.key")
     os.remove("dual.key")
+    os.remove("metadata.key")
+    os.remove("DataEN.pycomm")

@@ -22,8 +22,6 @@ def wipekey(enc):
     
     with open('dataEN.pycomm', 'w') as file:
         file.write(modded)
-    with open('key.key', 'w') as file:
-        pass
 
 
 def bintonum(bininput):

@@ -1,8 +1,8 @@
 from numbin import numtobin # type: ignore
-from rulecrypter import removetag, encrypt, encryptthem # type: ignore
-key_string = input('insert KEY: ')
+from rulecrypter import encrypt, encryptthem # type: ignore
+key_string = input('Set KEY/Password (Can Be Blank for non!): ')
 
-getstate = input('\n Is this One time - True or All Time - False (True/False): ')
+getstate = input('\n Is this One time use- True or All Time use- False (True/False): ')
 if getstate == "True" or getstate == "true":
     boolean = True
 elif getstate == "False" or getstate == "false":
@@ -18,7 +18,6 @@ with open('dataIN.pycomm', 'r') as file:
     content = file.read()  
 with open('key.key', 'w') as file:
     pass
-#removetag("ENCBYPASS ")
 
 with open ('key.key', 'a') as file:
     file.write(key_string)

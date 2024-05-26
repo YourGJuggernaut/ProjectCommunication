@@ -1,5 +1,5 @@
 from numbin import bintonum, getkey, wipekey  # type: ignore
-from rulecrypter import checktag, addtag, decry, secret, removekey, decryptthem # type: ignore
+from rulecrypter import decry, removekey, decryptthem # type: ignore
 import os
 key = decry()
 passed = False
@@ -12,9 +12,9 @@ else:
 
 state = getkey(key)
 if getkey(key) and key == inputkey:
-    wipekey(key)
     passed = True
-
+    temp1 = key
+    wipekey(key)
 for _ in range(2):
     bol = False
 
@@ -26,6 +26,7 @@ for _ in range(2):
 
 
     if passed:
+
         # CHAT GPT START ---
         # Split the binary string into groups of 5 bits
         binary_chunks = [content[i:i+5] for i in range(0, len(content), 6)]
@@ -62,5 +63,11 @@ if not passed:
 if passed:
     if decryptthem():
         removekey()
+    else:
+        with open('DataEN.pycomm', 'w') as file:
+            pass
+        with open('DataEN.pycomm', 'a', encoding='utf-8') as file:
+            pass
+            file.write(temp1 + content)
 #   addtag()
     print("Fully Succesfull")
