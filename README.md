@@ -46,6 +46,7 @@ This script takes 6-bit binary chunks, converts them to letters, and saves them 
 - **Addition of numbers**: *In Progress*
 - **Encryption of keys**: **DONE**
 - **One-time Key + All-time Key**: **DONE**
+- **Encryption of Encoded Material**: *In progress*
 
 # **NEW** Security
 - When Encoding, You enter a key. A file named key.key gets saved with that key. When it gets encrypted it also puts the key in the dataEN.pycomm
