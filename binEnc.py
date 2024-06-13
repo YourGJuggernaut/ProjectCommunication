@@ -1,5 +1,5 @@
 from numbin import numtobin # type: ignore
-from rulecrypter import encrypt, encryptthem # type: ignore
+from rulecrypter import encrypt, encryptthem, enx # type: ignore
 key_string = input('Set KEY/Password (Can Be Blank for non!): ')
 
 getstate = input('\n Is this One time use- True or All Time use- False (True/False): ')
@@ -37,6 +37,7 @@ with open ('DataEN.pycomm', 'a') as file:
             file.write("ENTER" + "\n")
 with open('metadata.key', 'w') as file:
     pass
+enx()
 if boolean:
     f = encryptthem('True')
     with open('metadata.key', 'wb') as file:

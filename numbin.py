@@ -1,7 +1,7 @@
 def getkey(key):
+    from rulecrypter import dnx # type: ignore
     string = ""
-    with open('dataEN.pycomm', 'r') as file:
-        securitycontent = file.read()
+    securitycontent = dnx()
     for i in range (0, len(key)):
         try:
             string = string + securitycontent[i]
@@ -14,13 +14,13 @@ def getkey(key):
 # used ChatGPT as Idea
 def wipekey(enc):
     string = ""
-    with open('dataEN.pycomm', 'r') as file:
+    with open('temp', 'r') as file:
         securitycontent = file.read()
     for i in range(0, len(enc)):
         string = string + securitycontent[i]
     modded = securitycontent.replace(string, '')
     
-    with open('dataEN.pycomm', 'w') as file:
+    with open('temp', 'w') as file:
         file.write(modded)
 
 
@@ -47,3 +47,10 @@ def numtobin(numinput):
         numinput = numinput // 2
     
     return binary.zfill(5)
+
+
+
+
+def rem():
+    import os
+    os.remove("temp")

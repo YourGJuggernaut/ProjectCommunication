@@ -1,5 +1,22 @@
-from numbin import bintonum, getkey, wipekey  # type: ignore
-from rulecrypter import decry, removekey, decryptthem # type: ignore
+import numbin # type: ignore
+import rulecrypter # type: ignore
+
+bintonum = numbin.bintonum
+getkey = numbin.getkey
+wipekey = numbin.wipekey
+rem = numbin.rem
+
+decry = rulecrypter.decry
+removekey = rulecrypter.removekey
+decryptthem = rulecrypter.decryptthem
+dnx = rulecrypter.dnx
+unopt = rulecrypter.unopt
+enx = rulecrypter.enx
+tmp = rulecrypter.tmp
+red = rulecrypter.red
+
+
+
 import os
 key = decry()
 passed = False
@@ -14,22 +31,26 @@ state = getkey(key)
 if getkey(key) and key == inputkey:
     passed = True
     temp1 = key
+    content = dnx()
+    tmp(content)
+    t22 = red()
+    towir = str(t22)
     wipekey(key)
-for _ in range(2):
+    t22 = red()
+for _ in range(4):
     bol = False
 
     with open('DataOUT.pycomm', 'w'):
         pass
 
-    with open('DataEN.pycomm', 'r') as file:
-        content = file.read()
+
 
 
     if passed:
 
         # CHAT GPT START ---
         # Split the binary string into groups of 5 bits
-        binary_chunks = [content[i:i+5] for i in range(0, len(content), 6)]
+        binary_chunks = [t22[i:i+5] for i in range(0, len(t22), 6)]
         decoded_string = ""
         for chunk in binary_chunks:
         # CHAT GPT END ---
@@ -61,13 +82,15 @@ if not passed:
 #    passed = False
 #    print("Arleady used, re-allow decryption")
 if passed:
+    rem()
     if decryptthem():
         removekey()
     else:
+
         with open('DataEN.pycomm', 'w') as file:
             pass
         with open('DataEN.pycomm', 'a', encoding='utf-8') as file:
             pass
-            file.write(temp1 + content)
+            unopt(towir)
 #   addtag()
     print("Fully Succesfull")

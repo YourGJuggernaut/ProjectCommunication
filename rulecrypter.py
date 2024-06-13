@@ -44,6 +44,53 @@ def decryptthem():
         return True
     else:
         return False
+def enx():
+    from cryptography.fernet import Fernet # type: ignore
+    with open('dual.key', 'r') as file:
+        key = file.read()
+    cipher = Fernet(key)
+    with open('DATAEN.pycomm', 'r') as file:
+        content = file.read()
+    con = content.encode('utf-8')
+    text = cipher.encrypt(con)
+    with open('DATAEN.pycomm', 'wb') as file:
+        pass
+        file.write(text)
+
+
+def unopt(bs):
+    from cryptography.fernet import Fernet # type: ignore
+    with open('dual.key', 'r') as file:
+        key = file.read()
+    cipher = Fernet(key)
+    content = bs
+    con = content.encode('utf-8')
+    text = cipher.encrypt(con)
+    with open('DATAEN.pycomm', 'wb') as file:
+        pass
+        file.write(text)
+        
+def dnx():
+    from cryptography.fernet import Fernet # type: ignore
+    with open('dual.key', 'r') as file:
+        key = file.read()
+    cipher = Fernet(key)
+    with open('dataEN.pycomm', 'r') as file:
+        content = file.read()
+    content2 = cipher.decrypt(content).decode()
+    return content2
+
+def tmp(inp):
+    with open('temp', 'w') as file:
+        pass
+        file.write(inp)
+
+def red():
+    with open('temp', 'r') as file:
+        con = file.read()
+    return con
+
+
 
 def removekey():
     import os
